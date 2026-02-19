@@ -1,0 +1,110 @@
+.forecast-card {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.forecast-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.tab-button.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.forecast-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.forecast-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.forecast-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.forecast-item.selected {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.forecast-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forecast-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.forecast-temp {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+.temp-high {
+  color: white;
+}
+
+.temp-separator {
+  opacity: 0.5;
+}
+
+.temp-low {
+  opacity: 0.7;
+}
+
+.forecast-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  font-size: 0.8125rem;
+}
+
+.date {
+  font-weight: 600;
+}
+
+.day {
+  opacity: 0.7;
+}
