@@ -27,6 +27,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -96,4 +97,64 @@
 
 .suggestions-dropdown::-webkit-scrollbar-thumb:hover {
   background: rgba(102, 126, 234, 0.5);
+}
+
+/* ── Search submit button ──────────────────────────── */
+.search-submit-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(102, 126, 234, 0.75);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
+  margin-left: 0.25rem;
+}
+
+.search-submit-btn:hover:not(:disabled) {
+  background: rgba(102, 126, 234, 1);
+  transform: scale(1.08);
+}
+
+.search-submit-btn:disabled,
+.search-submit-btn--loading {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Inline loading dot ────────────────────────────── */
+.search-loading-dot {
+  display: flex;
+  align-items: center;
+  margin-right: 0.25rem;
+}
+
+.dot-pulse {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.8);
+  animation: dotPulse 1s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
 }
